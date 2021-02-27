@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "ph-colors";
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: $color-background;
+  color: $color-text;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+}

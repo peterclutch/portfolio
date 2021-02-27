@@ -1,0 +1,77 @@
+@import "ph-colors";
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 64px 32px 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 64px;
+    width: 100%;
+
+    .image {
+      margin-right: 32px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .description {
+      align-self: flex-end;
+      flex: 1 1 0;
+      order: 2;
+      font-size: 15px;
+
+      div {
+
+        &:first-child {
+          font-weight: 500;
+          color: $color-secondary;
+        }
+
+        &:last-child {
+          cursor: pointer;
+          margin-top: 16px;
+          margin-right: 15%;
+          font-size: 22px;
+          letter-spacing: -0.4px;
+
+          &:after {
+            margin: 18px 0;
+            display: block;
+            content: '';
+            height: 4px;
+            width: 160px;
+            background: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 789px) {
+
+  .container {
+    padding: 64px 16px 0;
+
+    .row {
+      flex-direction: column;
+
+      .image {
+        width: 100%;
+        margin-bottom: 32px;
+        margin-right: 0;
+      }
+
+      .description {
+        align-self: normal;
+      }
+    }
+  }
+}
