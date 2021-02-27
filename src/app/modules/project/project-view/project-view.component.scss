@@ -41,27 +41,49 @@
 }
 
 article {
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 75px 16px 0;
+  margin-top: 75px;
   font-size: 19px;
 
+  em {
+    font-style: normal;
+  }
+
+  h1, p, q, ol {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    padding: 0 16px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 96px auto 12px;
+    color: $color-primary;
+  }
+
   p {
-    margin-bottom: 32px;
     line-height: 2;
+
+    .highlight {
+      font-weight: 500;
+    }
   }
 
   q {
     position: relative;
     display: block;
     quotes: none;
-    margin: 32px -16px;
+    margin: 32px auto;
     padding: 24px 32px;
     background: $color-muted;
     color: $color-tertiary;
     font-weight: 500;
     line-height: 2;
     border-radius: 8px;
+
+      .highlight {
+        color: $color-secondary;
+      }
 
     &:before {
       content: '';
@@ -75,6 +97,51 @@ article {
       width: 32px;
       height: 32px;
       text-align: center;
+    }
+  }
+
+  ol {
+
+    li {
+      margin-bottom: 18px;
+      padding-left: 18px;
+
+      &::marker {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  figure {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto !important;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    img {
+      width: 100%;
+    }
+
+    .figure-multi {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      img {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+
+    figcaption {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1;
+      color: hsl(225deg, 12%, 40%);
+      margin: 18px 0 64px;
     }
   }
 }
@@ -91,8 +158,12 @@ article {
 
   article {
 
+    ol {
+      padding-left: 42px;
+    }
+
     q {
-      margin: 32px -16px 32px 0;
+      margin: 32px 0 32px 16px;
       border-radius: 8px 0 0 8px;
     }
   }
