@@ -50,10 +50,33 @@
     <figcaption>Interactive prototype</figcaption>
   </figure>
 
-  <!--  <figure>-->
-  <!--    <div class="videowrapper">-->
-  <!--      <iframe width="650" height="366" src="https://www.youtube.com/embed/bHppVfFjCaI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-  <!--    </div>-->
-  <!--  </figure>-->
-
+    <figure>
+      <div class="video-wrapper">
+        <iframe width="1020" height="574" src="https://www.youtube.com/embed/bHppVfFjCaI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <figcaption>Prototype demonstration</figcaption>
+    </figure>
 </article>
+
+<img class="wave" src="assets/svg/wave.svg">
+
+<div class="assets-wrapper">
+  <div class="assets">
+    <h1>Learn more ></h1>
+    <div>
+      <a *ngFor="let asset of project.assets" target="_blank" [href]="asset.ref">{{asset.title}}</a>
+    </div>
+  </div>
+</div>
+
+<div class="team-wrapper">
+  <div class="team">
+    <h1>The team ></h1>
+    <ul>
+      <li *ngFor="let teamMember of project.team">
+        <a target="_blank" [href]="teamMember.linkedIn">{{teamMember.name}}</a>
+      </li>
+      <li>Me</li>
+    </ul>
+  </div>
+</div>

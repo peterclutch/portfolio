@@ -11,9 +11,21 @@ export class ProjectViewComponent implements OnInit {
     id: 0,
     title: 'Using Data Physicalization to Foster Storytelling Through Group Heart Rate Data',
     subtitle: 'Master\'s Thesis',
-    thumbnailDest: '',
-    heroImgDest: '',
-    content: ''
+    thumbnailRef: '',
+    headerRef: '',
+    content: '',
+    team: [{
+      name: 'Mark Flarup-Jensen',
+      linkedIn: 'https://www.linkedin.com/in/markflarup/'
+    }, {
+      name: 'Anders Syrach Lykkegaard',
+      linkedIn: 'https://www.linkedin.com/in/anders-lykkegaard-916356148/'
+    }],
+    assets: [{
+      title: 'Master\'s Thesis',
+      ref: 'assets/doc/MastersThesis.pdf'
+    }]
+
   };
 
   constructor() { }

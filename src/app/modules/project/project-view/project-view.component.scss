@@ -40,6 +40,13 @@
   }
 }
 
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: $color-primary;
+
+}
+
 article {
   margin-top: 75px;
   font-size: 19px;
@@ -55,10 +62,7 @@ article {
   }
 
   h1 {
-    font-size: 24px;
-    font-weight: 500;
     margin: 96px auto 12px;
-    color: $color-primary;
   }
 
   p {
@@ -136,12 +140,100 @@ article {
       }
     }
 
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 52.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     figcaption {
       text-align: center;
       font-size: 18px;
       line-height: 1;
       color: hsl(225deg, 12%, 40%);
       margin: 18px 0 64px;
+    }
+  }
+}
+
+.wave {
+  display: block;
+  margin: -48px 0 -1px 0;
+}
+
+.assets-wrapper {
+  padding: 64px 0 128px;
+  width: 100%;
+  background-color: $color-muted;
+
+  .assets {
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+
+    h1 {
+      color: $color-secondary;
+    }
+
+    a {
+      font-weight: 500;
+      color: $color-primary;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+.team-wrapper {
+  padding: 64px 0 128px;
+  width: 100%;
+  background-color: $color-muted;
+
+  .team {
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+
+    h1 {
+      color: $color-secondary;
+    }
+
+    a {
+      color: $color-primary;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 24px;
+    padding-inline-start: 0;
+
+    li {
+      list-style-type: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      color: $color-primary;
     }
   }
 }
@@ -165,6 +257,20 @@ article {
     q {
       margin: 32px 0 32px 16px;
       border-radius: 8px 0 0 8px;
+    }
+  }
+
+  .team-wrapper {
+
+    .team {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .assets-wrapper {
+
+    .assets {
+      grid-template-columns: 1fr;
     }
   }
 }
