@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { IProject } from '../../../shared/models/account.model';
+import { ProjectService } from '../../../shared/services/project.service';
 
 @Component({
   selector: 'ph-project-nav',
@@ -7,16 +9,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./project-nav.component.scss']
 })
 export class ProjectNavComponent implements OnInit {
+  projects: IProject[] = [];
 
   constructor(
-    private router: Router
+    private router: Router,
+    private projectService: ProjectService
   ) { }
 
   ngOnInit(): void {
+    this.projects = this.projectService.getAllProjects();
   }
 
-  toArticle() {
-    this.router.navigate([`/projects/1`]);
+  toArticle(id: string) {
+    this.router.navigate([`/projects/${id}`]);
   }
 
 }
