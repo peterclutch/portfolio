@@ -6,7 +6,12 @@ import { ProjectViewComponent } from './modules/project/project-view/project-vie
 
 const routes: Routes = [
   { path: 'projects', component: ProjectNavComponent },
-  { path: 'projects/:id', component: ProjectViewComponent },
+  {
+    path: 'projects/:id',
+    component: ProjectViewComponent,
+    data: {
+      hasScrollIndicator: true
+    }},
   { path: 'bio', component: BioComponent },
   { path: '**', redirectTo: '/bio' }
 ];

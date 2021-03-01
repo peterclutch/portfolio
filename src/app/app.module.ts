@@ -12,6 +12,7 @@ import { SquattyBuddyComponent } from './modules/project/project-content/squatty
 import { FormatDatePipe } from './shared/pipes/format-date.pipe';
 import { KatamariComponent } from './modules/project/project-content/katamari/katamari.component';
 import { IceBreakerComponent } from './modules/project/project-content/ice-breaker/ice-breaker.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { IceBreakerComponent } from './modules/project/project-content/ice-break
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [MainComponent]

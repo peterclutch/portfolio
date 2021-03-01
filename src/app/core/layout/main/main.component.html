@@ -24,6 +24,12 @@
   </header>
 </div>
 
+<div
+  class="progress"
+  *ngIf="scrollIndicator"
+  [style.transform]="'translateX(' + scrollProgress + '%)'"
+></div>
+
 <div class="header-wrapper mobile">
   <header>
     <div class="left">
@@ -35,7 +41,6 @@
     </div>
   </header>
 </div>
-
 <div class="content">
   <router-outlet></router-outlet>
 </div>
