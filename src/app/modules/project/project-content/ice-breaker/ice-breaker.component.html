@@ -1,0 +1,47 @@
+<article>
+  <p><em>Ice Breaker</em> was my first-year project at uni. It was a way to showcase what we had learned throughout the year and use our newly acquired skills to create an interesting, creative project which could influence social behavior through persuasive design elements.</p>
+
+  <p>For this project, the design phase included an interview with an organizer of <em>Aarhus Pride</em> (a pride parade in Aarhus) and plenty of brainstorming. However, as a first-year project, the academic requirements and the design process was not as important as prototyping a proof-of-concept.</p>
+
+  <h1>Concept</h1>
+
+  <q>The <em>Ice Breaker</em> glass is based upon the need to create a friendly and social atmosphere at big social events by creating a seamless way for people to expand their circle of friends</q>
+
+  <p>This is done by initiating social interactions through an augmented glass. When purchasing the glass, a social profile must be created that consists of the user's name and a profile picture taken at the registration booth.</p>
+
+  <p>Then, the user cheers with an activation glass to confirm the purchase. As a result, the glass lights up, but to avoid the light fading away the user has to cheer with other participants. However, cheering with the same group of friends for too long will cause the light to fade at an increasing rate unless the user does not find new people to cheer with.</p>
+
+  <p>This is a deliberate design choice to persuade people to approach unfamiliar faces at the event.</p>
+
+  <q>All cheering throughout the event is registered on a social media application, which can be accessed after the event to check out their data or connect with others</q>
+
+  <p>This data includes who they cheered with, when the cheered and how many times they cheered with a given person. Users are presented with relevant stats, a 'top-cheer-budies' and can comment on other people’s profile to get in touch with them.</p>
+
+  <figure>
+    <img title="Glass registration" src="assets/images/ice-breaker/icebreakerphoto4.jpg">
+    <figcaption>Glass registration</figcaption>
+  </figure>
+
+  <figure>
+    <div class="figure-multi">
+      <img title="Glass prototypes in front of website" src="assets/images/ice-breaker/icebreakerphoto2.jpg">
+      <img title="Example of user profile" src="assets/images/ice-breaker/icebreakerphoto3.jpg">
+    </div>
+    <figcaption>Glass prototypes and a user profile</figcaption>
+  </figure>
+
+  <h1>System description</h1>
+
+  <p>Inside the container of the glass, six LEDs are attached to light up the glass. Furthermore, a piezoelectric sensor, radio receiver, radio transmitter, Arduino Pro Mini and a nine-volt battery are packed into the container.</p>
+
+  <p>The piezoelectric sensor determines when a cheer has a happened, which prompts the glass to send its ID via. its transmitter. If the central Arduino receives two or more IDs within a certain timeframe, it is regarded as a cheer. A successful cheer is saved to a SQL server, and the glasses gets a transmission back, informing them of the duration to turn on the LEDs.</p>
+
+  <p>It is worth noting that this implementation is not a scalable solution by any means, but as a proof-of-concept for a university exhibition it worked seamlessly!</p>
+
+  <figure>
+    <div class="video-wrapper">
+      <iframe width="650" height="366" src="https://www.youtube.com/embed/aW96NaNt6vE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <figcaption>Video presentation</figcaption>
+  </figure>
+</article>

@@ -1,0 +1,117 @@
+@import "ph-colors";
+
+.container {
+  width: 100%;
+  max-width: 1020px;
+  padding: 128px 32px 128px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .welcome-screen {
+    min-height: calc(100vh - 128px - 65px);
+  }
+}
+
+.experience {
+  margin-top: 128px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 128px;
+
+  h1 {
+    color: $color-primary;
+    letter-spacing: -.4px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 48px;
+  }
+
+  .work {
+  }
+
+  .timeline {
+    position: relative;
+    padding-top: 36px;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 8px;
+      left: 12px;
+      top: 0;
+      background-color: $color-tertiary-muted;
+      border-radius: 4px;
+    }
+
+    .job, .school {
+      position: relative;
+      margin-left: 56px;
+      min-height: 100px;
+      margin-bottom: 72px;
+
+      img {
+        height: 32px;
+      }
+
+      .logo {
+        height: 32px;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        color: $color-tertiary;
+      }
+
+      .institution {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 24px;
+        color: $color-tertiary;
+
+        img {
+          margin-right: 12px;
+        }
+      }
+
+      .position {
+        margin-top: 18px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .location {
+        color: $color-grey-muted;
+      }
+
+      .position, .location, .duration {
+        margin-bottom: 6px;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        left: -48px;
+        top: 8px;
+        background-color: $color-tertiary;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 789px) {
+
+  .container {
+    padding: 64px 16px 128px;
+  }
+
+  .experience {
+    grid-template-columns: 1fr;
+    grid-gap: 96px;
+  }
+}

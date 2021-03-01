@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ph-bio',
   templateUrl: './bio.component.html',
-  styleUrls: ['./bio.component.scss']
+  styleUrls: ['./bio.component.scss', './bio-intro.component.scss']
 })
 export class BioComponent implements OnInit {
 

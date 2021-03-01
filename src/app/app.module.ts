@@ -7,7 +7,11 @@ import { BioComponent } from './modules/bio/bio.component';
 import { ProjectViewComponent } from './modules/project/project-view/project-view.component';
 import { ArticleDirective } from './shared/directives/article.directive';
 import { HeartTaleComponent } from './modules/project/project-content/heart-tale/heart-tale.component';
-import { EasyscheduleComponent } from './modules/project/project-content/easyschedule/easyschedule.component';
+import { EasyScheduleComponent } from './modules/project/project-content/easyschedule/easy-schedule.component';
+import { SquattyBuddyComponent } from './modules/project/project-content/squatty-buddy/squatty-buddy.component';
+import { FormatDatePipe } from './shared/pipes/format-date.pipe';
+import { KatamariComponent } from './modules/project/project-content/katamari/katamari.component';
+import { IceBreakerComponent } from './modules/project/project-content/ice-breaker/ice-breaker.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { EasyscheduleComponent } from './modules/project/project-content/easysch
     ProjectViewComponent,
     ArticleDirective,
     HeartTaleComponent,
-    EasyscheduleComponent
+    EasyScheduleComponent,
+    SquattyBuddyComponent,
+    FormatDatePipe,
+    KatamariComponent,
+    IceBreakerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
-import { IProject } from '../../../shared/models/account.model';
+import { IProject } from '../../../shared/models/project.model';
 import { ProjectService } from '../../../shared/services/project.service';
 import { ActivatedRoute } from '@angular/router';
 import { ArticleDirective } from '../../../shared/directives/article.directive';
@@ -31,6 +31,10 @@ export class ProjectViewComponent implements OnInit, AfterViewInit {
   loadArticle() {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.project.content);
     this.articleHost.viewContainerRef.createComponent<any>(componentFactory);
+  }
+
+  getHeaderPath(project: IProject) {
+    return `assets/images/${project.id}/${project.id}.${project.headerImg ? project.headerImg : 'jpg'}`;
   }
 
 }

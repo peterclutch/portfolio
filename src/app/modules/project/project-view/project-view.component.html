@@ -1,7 +1,8 @@
 <div class="article-hero">
-  <div class="subtitle">{{project.subtitle}}</div>
-  <div class="title">{{project.title}}</div>
-  <img [src]="project.headerRef">
+  <div class="subtitle">{{ project.subtitle }}</div>
+  <div class="title">{{ project.title }}</div>
+  <div class="date">{{ project.date | formatDate }}</div>
+  <img [src]="getHeaderPath(project)">
 </div>
 
 <ng-template phArticle></ng-template>
@@ -13,7 +14,7 @@
     <h1>Investigate</h1>
     <ul>
       <li *ngFor="let asset of project.assets">
-        <a  target="_blank" [href]="asset.ref">{{asset.title}}</a>
+        <a  target="_blank" [href]="asset.ref">{{ asset.title }}</a>
       </li>
     </ul>
   </div>
@@ -24,7 +25,7 @@
     <h1>In collaboration with</h1>
     <ul>
       <li *ngFor="let teamMember of project.team">
-        <a target="_blank" [href]="teamMember.linkedIn">{{teamMember.name}}</a>
+        <a target="_blank" [href]="teamMember.linkedIn">{{ teamMember.name }}</a>
       </li>
     </ul>
   </div>

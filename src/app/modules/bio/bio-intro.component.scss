@@ -1,0 +1,150 @@
+@import "ph-colors";
+
+.intro {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  grid-gap: 72px;
+  align-items: center;
+
+  .description {
+    margin-top: 24px;
+
+    > div {
+      margin-top: 18px;
+      line-height: 2;
+      font-size: 20px;
+
+      &:last-child {
+        margin-left: 18px;
+      }
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 4px 0 0 9px;
+      position: relative;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: -.4px;
+      color: $color-primary;
+
+      &:not(:first-of-type) {
+        color: $color-secondary;
+
+        &::before {
+          font-weight: 400;
+          display: block;
+          position: absolute;
+          content: '& ';
+          left: -28px;
+          top: -50%;
+          color: $color-grey-muted;
+        }
+      }
+    }
+  }
+
+  .portrait {
+    position: relative;
+
+    .portrait-content {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    svg {
+      width: 100%;
+      transform: translatey(0px);
+      -webkit-animation-name: float-loop;
+      animation-name: float-loop;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease;
+      animation-timing-function: ease;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 35%);
+      width: 70%;
+      height: 8px;
+      border-radius: 100%;
+      background-color: rgba(222, 225, 228, .4);
+
+      -webkit-animation-name: shadow-loop;
+      animation-name: shadow-loop;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease;
+      animation-timing-function: ease;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+    }
+  }
+}
+
+@media screen and (max-width: 789px) {
+
+  .intro {
+    grid-template-columns: 1fr;
+    grid-gap: 36px;
+
+    .portrait {
+      order: 0;
+    }
+
+    .description {
+      order: 1;
+      margin-top: 0;
+
+      > div {
+
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+
+      h1 {
+        margin-left: 0;
+
+        &:not(:first-of-type) {
+
+          &::before {
+            display: inline;
+            position: inherit;
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes float-loop {
+  0% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@-webkit-keyframes shadow-loop {
+  0% {
+    left: calc(50% - 15%);
+    width: 20%;
+  }
+  100% {
+    left: calc(50% - 30%);
+    width: 60%;
+  }
+}

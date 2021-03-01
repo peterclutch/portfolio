@@ -28,7 +28,7 @@ article {
   p {
     line-height: 2;
 
-    .highlight {
+    em {
       font-weight: 500;
     }
   }
@@ -39,13 +39,13 @@ article {
     quotes: none;
     margin: 48px auto;
     padding: 24px 32px;
-    background: $color-muted;
+    background: $color-tertiary-muted;
     color: $color-tertiary;
     font-weight: 500;
     line-height: 2;
     border-radius: 8px;
 
-    .highlight {
+    em {
       color: $color-secondary;
     }
 
@@ -118,7 +118,7 @@ article {
       text-align: center;
       font-size: 18px;
       line-height: 1;
-      color: hsl(225deg, 12%, 40%);
+      color: $color-grey-muted;
       margin: 18px 0 64px;
     }
   }

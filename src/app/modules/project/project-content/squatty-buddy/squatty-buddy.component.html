@@ -1,0 +1,47 @@
+<article>
+  <p>The focus of <em>SquattyBuddy</em> was to create an embedded prototype using a range of different sensors, actuators and microcontrollers, as well as wireless serial communication. The concept itself was purely made for building something to utilize these techniques, which explains its rather <em>unpolished appearance</em>.</p>
+
+  <h1>Concept</h1>
+  <p><em>SquattyBuddy</em> provides a simple but effective feedback when squatting, helping users to keep track of their current depth and letting them know when the perfect depth has been reached.</p>
+
+  <q>The depth is shown to the user through a vertical row of LEDs placed in front of the user. The light will always follow the user so they only needs to look straight ahead for feedback</q>
+
+  <p>The user is then shown one of three colors. Either red, yellow or green. At the start of the exercise it will be red, since the user is not at the correct depth. As the user is squatting further down, the LEDs will turn yellow, and eventually green once the optimal depth is reached.</p>
+
+  <figure>
+    <img title="SquattyBuddy setup" src="assets/images/squatty-buddy/squattybuddyphoto1.jpg">
+    <figcaption>SquattyBuddy setup</figcaption>
+  </figure>
+
+  <p>When a user wants to use <em>SquattyBuddy</em> they put on the knee supporter and walks over to the squatting station. When entering, <em>SquattyBuddy</em> will activate itself and start the activity. This is shown to the user by a flickering of all of the LEDs. An LED will then turn red in eye-height of the user and the squatting can begin. In the upper corner of the mirror a counter is placed which counts every repetition.</p>
+
+  <p>Unless the user reaches the perfect depth and they see a green LED the counter will not count. As soon as the user is done, all they have to do is to stop squatting and the lights will then blink once again indicating the activity is over.</p>
+
+  <figure>
+    <div class="figure-multi">
+      <img title="7 segment LED display" src="assets/images/squatty-buddy/squattybuddyphoto2.jpg">
+      <img title="Flex sensor in knee supporter" src="assets/images/squatty-buddy/squattybuddyphoto3.jpg">
+    </div>
+    <div class="figure-multi">
+      <img title="RGB LED feedback" src="assets/images/squatty-buddy/squattybuddyphoto4.jpg">
+      <img title="UR sensor" src="assets/images/squatty-buddy/squattybuddyphoto5.jpg">
+    </div>
+    <figcaption>Hardware components</figcaption>
+  </figure>
+
+  <h1>System Description</h1>
+  <p><em>SquattyBuddy</em> consists of several I/O sensors, microcontrollers, LEDs and Xbees (wireless communication). The model of the microcontroller is an ATmega8. <em>SquattyBuddy</em> is divided into a central system, and a mobile wearable device.</p>
+
+  <p>The wearable device is attached to the knee with a flex sensor in order to measure the angle of the knee when the user is squatting. A UR sensor provides the system with a measurement of the person's height and activates the system.</p>
+
+  <p>Feedback to the user is shown through ten RGB LEDs that output either a green, yellow or red light depending on the depth of the squads.</p>
+
+  <p>Lastly, a 7 segment LED display is added to show the number of squats exercised.</p>
+
+  <figure>
+    <div class="video-wrapper">
+      <iframe width="650" height="366" src="https://www.youtube.com/embed/HMyyiQxi5xM?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <figcaption>Video presentation</figcaption>
+  </figure>
+</article>

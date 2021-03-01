@@ -1,0 +1,28 @@
+<article>
+  <p>I redesigned a controller for the video game <em>Katamari Damacy</em> to create a natural interaction tailored to its gameplay and controls. In Katamari Damacy, the player pushes a ball around with the goal of rolling up objects to increase the size of the ball.</p>
+
+  <q>The final prototype allows direct interaction with a physical ball, which the user can turn and rotate</q>
+
+  <p>The ball placed inside of the 3D-printed prototype, which is embedded with optical sensors (from a hacked optical mouse) and ball transfer units (as seen below).</p>
+
+  <figure>
+    <div class="figure-multi">
+      <img title="3D printed model" src="assets/images/katamari/katamariphoto2.jpg">
+      <img title="Optical mouse and ball transfer units" src="assets/images/katamari/katamariphoto1.jpg">
+    </div>
+    <figcaption>3D-printed prototype</figcaption>
+  </figure>
+
+  <p>The 3D model was created using Rhino, designed with the exact measurements for the hardware and the ball. Because Katamari Damacy is a video game for the PlayStation, input data had to be translated in a way that makes sense for a PlayStation controller.</p>
+
+  <p>The video game is primarily played using the two analog sticks on the controller, so we had to map the movement of the ball to simulate that input and move the character accordingly in the video game. Moving in any direction requires the player to push both analog sticks in that direction, which was relatively easy to implement.</p>
+
+  <p>Turning the ball however, required one analog stick to be down and one to be up. To map we had to read the z-axis and simulate the reverse analog stick input, but we had to make sure that this movement is only read while the x- and y-axis is still.</p>
+
+  <figure>
+    <div class="video-wrapper">
+      <iframe width="650" height="366" src="https://www.youtube.com/embed/drmpDaMAZEw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <figcaption>Video presentation</figcaption>
+  </figure>
+</article>

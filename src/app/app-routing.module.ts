@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'projects', component: ProjectNavComponent },
   { path: 'projects/:id', component: ProjectViewComponent },
   { path: 'bio', component: BioComponent },
-  { path: '**', redirectTo: '/projects' }
+  { path: '**', redirectTo: '/bio' }
 ];
 
 @NgModule({

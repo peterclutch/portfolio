@@ -1,9 +1,24 @@
 @import "ph-colors";
 
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -.4px;
+  color: $color-tertiary;
+  margin-bottom: 36px;
+
+  em {
+    font-style: normal;
+    color: $color-secondary;
+    font-size: 18px;
+    letter-spacing: 0;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 900px;
-  padding: 64px 32px 0;
+  padding: 64px 32px 128px;
   margin: 0 auto;
   box-sizing: border-box;
 
@@ -42,7 +57,7 @@
           font-size: 22px;
           letter-spacing: -0.4px;
 
-          &:after {
+          &::after {
             margin: 18px 0;
             display: block;
             content: '';
@@ -57,6 +72,13 @@
 }
 
 @media screen and (max-width: 789px) {
+
+  h1 {
+
+    em {
+      display: block;
+    }
+  }
 
   .container {
     padding: 64px 16px 0;

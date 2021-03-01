@@ -1,7 +1,8 @@
 <div class="container">
+  <h1>University projects <em>(2012 - 2018)</em></h1>
   <div class="row" *ngFor="let project of projects; let index = index">
     <div (click)="toArticle(project.id)" class="image">
-      <img class="picture" [src]="project.thumbnailRef">
+      <img [src]="'assets/images/thumbnails/' + project.id + '.jpg'">
     </div>
     <div class="description">
       <div>{{ project.subtitle }}</div>

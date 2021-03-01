@@ -31,6 +31,7 @@ header {
     flex-direction: row;
     align-items: center;
     height: 100%;
+    white-space: nowrap;
 
     .logo {
       font-size: 24px;
@@ -57,7 +58,7 @@ header {
         outline:none;
         cursor: pointer;
 
-        &.active:after {
+        &.active::after {
           margin-top: 4px;
           margin-bottom: -4px;
           display: block;
@@ -89,6 +90,16 @@ header {
 
     &.desktop {
       visibility: hidden;
+    }
+  }
+
+  header {
+
+    .left {
+
+      .logo {
+        margin-right: 12px;
+      }
     }
   }
 }

@@ -21,8 +21,15 @@
   .title {
     font-size: 32px;
     letter-spacing: -0.4px;
+  }
 
-    &:after {
+  .date {
+    margin-top: 12px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: $color-grey-muted;
+
+    &::after {
       margin: 32px auto;
       display: block;
       content: '';
@@ -55,7 +62,7 @@ h1 {
 .extra-wrapper {
   padding: 64px 0 128px;
   width: 100%;
-  background-color: $color-muted;
+  background-color: $color-tertiary-muted;
 
   .extra {
     max-width: 1020px;
@@ -69,7 +76,7 @@ h1 {
     h1 {
       color: $color-secondary;
 
-      &:after {
+      &::after {
         content: ' ➜';
       }
     }
@@ -113,7 +120,7 @@ h1 {
 
       h1 {
 
-        &:after {
+        &::after {
           content: '';
         }
       }
