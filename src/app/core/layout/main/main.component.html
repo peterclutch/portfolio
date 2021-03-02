@@ -1,47 +1,55 @@
-<div class="header-wrapper desktop">
-  <header>
-    <div class="left">
-      <div class="logo" routerLink="/">Peter Hallum.</div>
-      <ul>
-        <li
-          routerLink="/bio"
-          routerLinkActive="active"
-        >
-          Bio
-        </li>
-        <li
-          routerLink="/projects"
-          routerLinkActive="active"
-        >
-          Projects
-        </li>
-      </ul>
-    </div>
-
-    <div class="right">
-      <!-- TODO toggle to private life page -->
-    </div>
-  </header>
-</div>
-
-<div
-  class="progress"
-  *ngIf="scrollIndicator"
-  [style.transform]="'translateX(' + scrollProgress + '%)'"
-></div>
-
-<div class="header-wrapper mobile">
-  <header>
-    <div class="left">
-      <div class="logo" routerLink="/">Peter Hallum.</div>
-    </div>
-
-    <div class="right">
-      <svg style="width: 32px; height: 32px;"><line x1="4.8" y1="9.6" x2="27.2" y2="9.6" stroke="#000" stroke-width="3" stroke-linecap="round"></line><line x1="27.2" y1="22.4" x2="4.8" y2="22.4" stroke="#000" stroke-width="3" stroke-linecap="round"></line></svg>
-    </div>
-  </header>
-</div>
 <div class="content">
-  <router-outlet></router-outlet>
-</div>
+  <div class="header-wrapper desktop">
+    <header>
+      <div class="left">
+        <div class="logo" routerLink="/">Peter Hallum.</div>
+        <ul>
+          <li
+            routerLink="/bio"
+            routerLinkActive="active"
+          >
+            Bio
+          </li>
+          <li
+            routerLink="/projects"
+            routerLinkActive="active"
+          >
+            Projects
+          </li>
+        </ul>
+      </div>
 
+      <div class="right">
+        <!-- TODO toggle to private life page -->
+      </div>
+    </header>
+  </div>
+
+  <div
+    class="progress"
+    *ngIf="scrollIndicator"
+    [style.transform]="'translateX(' + scrollProgress + '%)'"
+  ></div>
+
+  <div class="header-wrapper mobile">
+    <header>
+      <div class="left">
+        <div class="logo" routerLink="/">Peter Hallum.</div>
+      </div>
+
+      <div class="right">
+        <div class="burger">
+          <svg style="width: 32px; height: 32px;">
+            <line x1="4.8" y1="9.6" x2="27.2" y2="9.6" stroke="#000" stroke-width="3" stroke-linecap="round"></line>
+            <line x1="27.2" y1="22.4" x2="4.8" y2="22.4" stroke="#000" stroke-width="3" stroke-linecap="round"></line>
+          </svg>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

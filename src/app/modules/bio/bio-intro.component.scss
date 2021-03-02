@@ -65,6 +65,9 @@
       animation-timing-function: ease;
       -webkit-animation-direction: alternate;
       animation-direction: alternate;
+
+      // If implementation of blob clip-path is not supported by the browser, hopefully this one can cover those cases:
+      clip-path: circle(50% at 50% 50%);
     }
 
     &::after {
