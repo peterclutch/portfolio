@@ -1,0 +1,53 @@
+@import "ph-colors";
+
+.container {
+  width: 100vw;
+  height: 100%;
+  background-color: $color-background-blurred;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  height: 50%;
+  list-style-type: none;
+  font-size: 28px;
+  font-weight: 500;
+  padding-inline-start: 16px;
+
+  li {
+    margin-bottom: 6px;
+    cursor: pointer;
+    padding: 16px;
+    outline: none;
+
+    &.active {
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}
+
+.close {
+  position: fixed;
+  cursor: pointer;
+  height: 32px;
+  padding: 6px;
+  right: 16px;
+  top: calc((65px - 44px)/2);
+}
+
+.logo {
+  position: fixed;
+  cursor: pointer;
+  left: 16px;
+  top: calc((65px - 28.5px)/2);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  color: #4433ff;
+  outline: none;
+}

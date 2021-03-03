@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
+import { MenuOverlayService } from '../../../shared/services/menu-overlay.service';
 
 @Component({
   selector: 'ph-main',
@@ -11,7 +12,8 @@ export class MainComponent implements OnInit {
   scrollIndicator = false;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private menuOverlayService: MenuOverlayService
   ) { }
 
   ngOnInit(): void {
@@ -21,6 +23,10 @@ export class MainComponent implements OnInit {
         this.scrollIndicator = this.findRouterData(this.router.routerState.snapshot.root.firstChild, 'hasScrollIndicator') || false;
       }
     });
+  }
+
+  showMenu() {
+    this.menuOverlayService.open();
   }
 
   @HostListener('window:scroll', [])

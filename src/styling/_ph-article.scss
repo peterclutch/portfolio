@@ -52,7 +52,7 @@ article {
     &:before {
       content: '';
       position: absolute;
-      background: $color-background url('src/assets/svg/quote.svg') no-repeat center;
+      background: $color-background url('../../src/assets/svg/quote.svg') no-repeat center;
       top: 0;
       left: 0;
       transform: translate(-50%, -50%);

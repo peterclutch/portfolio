@@ -1,5 +1,7 @@
 @import "ph-colors";
 
+@import '~@angular/cdk/overlay-prebuilt.css';
+
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
@@ -10,4 +12,8 @@ body {
 a {
   text-decoration: none;
   color: $color-text;
+}
+
+.menu-panel {
+  height: 100%;
 }

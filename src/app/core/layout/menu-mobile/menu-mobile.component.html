@@ -1,0 +1,14 @@
+<div class="container" (click)="close()">
+  <div class="logo">
+    Peter Hallum.
+  </div>
+  <div class="close">
+    <svg style="width: 32px; height: 32px;">
+      <line x1="4.8" y1="27.2" x2="27.2" y2="4.8" stroke="#000" stroke-width="3" stroke-linecap="round"></line>
+      <line x1="4.8" y1="4.8" x2="27.2" y2="27.2" stroke="#000" stroke-width="3" stroke-linecap="round"></line>
+    </svg>
+  </div>
+  <ul>
+    <li *ngFor="let link of links" (click)="goToLink(link.directTo)">{{ link.name }}</li>
+  </ul>
+</div>

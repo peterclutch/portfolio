@@ -1,7 +1,5 @@
 @import "ph-colors";
 
-@import '~hamburgers/_sass/hamburgers/hamburgers.scss';
-
 $header-height: 65px;
 
 .header-wrapper {
@@ -110,6 +108,7 @@ header {
   }
 
   header {
+    padding: 0 16px;
 
     .left {
 

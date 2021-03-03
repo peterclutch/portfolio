@@ -15,6 +15,39 @@ h1 {
   }
 }
 
+.info-blob {
+  padding: 24px 32px;
+  margin: 48px 0;
+  background-color: $color-tertiary-muted;
+  color: $color-tertiary;
+  line-height: 2;
+  border-radius: 0 8px 8px 0;
+  max-width: 650px;
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+  border-left: 4px $color-primary solid;
+
+  //&:before {
+  //  content: "!";
+  //  font-size: 28px;
+  //  position: absolute;
+  //  background: white;
+  //  top: 0;
+  //  left: 0;
+  //  transform: translate(-50%, -50%);
+  //  padding: 8px;
+  //  border-radius: 50%;
+  //  width: 32px;
+  //  height: 32px;
+  //  text-align: center;
+  //  line-height: 1;
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: center;
+  //}
+}
+
 .container {
   width: 100%;
   max-width: 900px;
@@ -34,6 +67,7 @@ h1 {
 
       img {
         width: 100%;
+        border-radius: 3px;
       }
     }
 
@@ -42,6 +76,8 @@ h1 {
       flex: 1 1 0;
       order: 2;
       font-size: 15px;
+      cursor: pointer;
+      margin: 18px 0;
 
       div {
 
@@ -50,21 +86,36 @@ h1 {
           color: $color-secondary;
         }
 
-        &:last-child {
-          cursor: pointer;
+        &:nth-child(2) {
           margin-top: 16px;
           margin-right: 15%;
           font-size: 22px;
           letter-spacing: -0.4px;
 
-          &::after {
-            margin: 18px 0;
-            display: block;
-            content: '';
-            height: 4px;
-            width: 160px;
-            background: $color-primary;
-          }
+          //&::after {
+          //  margin: 18px 0;
+          //  display: block;
+          //  content: '';
+          //  height: 4px;
+          //  width: 160px;
+          //  background: $color-primary;
+          //}
+        }
+
+        &:nth-child(3) {
+          font-size: 16px;
+          font-weight: 500;
+          margin-top: 18px;
+          color: $color-tertiary;
+        }
+      }
+
+      &:hover {
+
+        div:nth-child(3):after {
+          margin-left: 6px;
+          content: ' > >';
+          //color: $color;
         }
       }
     }
@@ -81,7 +132,16 @@ h1 {
   }
 
   .container {
-    padding: 64px 16px 0;
+    padding: 64px 0 0;
+
+    .info-blob {
+      border-radius: 0;
+    }
+
+    h1, .description {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
 
     .row {
       flex-direction: column;
@@ -90,6 +150,10 @@ h1 {
         width: 100%;
         margin-bottom: 32px;
         margin-right: 0;
+
+        img {
+          border-radius: 0;
+        }
       }
 
       .description {

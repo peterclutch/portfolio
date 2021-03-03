@@ -13,6 +13,9 @@ import { FormatDatePipe } from './shared/pipes/format-date.pipe';
 import { KatamariComponent } from './modules/project/project-content/katamari/katamari.component';
 import { IceBreakerComponent } from './modules/project/project-content/ice-breaker/ice-breaker.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuMobileComponent } from './core/layout/menu-mobile/menu-mobile.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MenuOverlayService } from './shared/services/menu-overlay.service';
 
 @NgModule({
   declarations: [
@@ -26,14 +29,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SquattyBuddyComponent,
     FormatDatePipe,
     KatamariComponent,
-    IceBreakerComponent
+    IceBreakerComponent,
+    MenuMobileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    OverlayModule
   ],
-  providers: [],
-  bootstrap: [MainComponent]
+  providers: [
+    MenuOverlayService
+  ],
+  bootstrap: [MainComponent],
+  entryComponents: [
+    MenuMobileComponent
+  ]
 })
 export class AppModule { }
