@@ -52,9 +52,8 @@
       margin: 0 auto;
     }
 
-    svg {
+    img {
       width: 100%;
-      transform: translatey(0px);
       -webkit-animation-name: float-loop;
       animation-name: float-loop;
       -webkit-animation-duration: 3s;
@@ -65,9 +64,7 @@
       animation-timing-function: ease;
       -webkit-animation-direction: alternate;
       animation-direction: alternate;
-
-      // If implementation of blob clip-path is not supported by the browser, hopefully this one can cover those cases:
-      clip-path: circle(50% at 50% 50%);
+      clip-path: url(#svgClip);
     }
 
     &::after {
