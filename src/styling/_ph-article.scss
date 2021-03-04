@@ -115,11 +115,19 @@ article {
     }
 
     figcaption {
-      text-align: center;
       font-size: 18px;
       line-height: 1;
       color: $color-grey-muted;
       margin: 18px 0 64px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      em {
+        color: $color-grey-light;
+        margin-right: 12px;
+      }
     }
   }
 }

@@ -1,8 +1,11 @@
 @import "ph-article";
 
-em {
+q, p {
+  em {
 
-  &::after {
-    content: ' ❤️';
+    &::after {
+      content: ' ❤️';
+    }
   }
+
 }

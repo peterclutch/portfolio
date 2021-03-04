@@ -19,7 +19,7 @@
       }
     }
 
-    h1 {
+    h2 {
       font-size: 28px;
       margin: 4px 0 0 9px;
       position: relative;
@@ -64,7 +64,16 @@
       animation-timing-function: ease;
       -webkit-animation-direction: alternate;
       animation-direction: alternate;
-      clip-path: url(#svgClip);
+
+      &.clipped {
+        clip-path: url(#svgClip);
+      }
+
+      &.blob {
+        width: 70%;
+        margin: 0 auto;
+        display: none;
+      }
     }
 
     &::after {
@@ -99,6 +108,19 @@
 
     .portrait {
       order: 0;
+
+      img {
+
+        &.clipped {
+          display: none;
+        }
+
+        &.blob {
+          display: block;
+          border-radius: 45% 55% 65% 35% / 41% 58% 42% 59%;
+          overflow: hidden;
+        }
+      }
     }
 
     .description {
@@ -112,7 +134,7 @@
         }
       }
 
-      h1 {
+      h2 {
         margin-left: 0;
 
         &:not(:first-of-type) {

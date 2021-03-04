@@ -16,6 +16,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuMobileComponent } from './core/layout/menu-mobile/menu-mobile.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MenuOverlayService } from './shared/services/menu-overlay.service';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { IconDefinition } from '@ant-design/icons-angular';
+import { InstagramOutline, GithubOutline, LinkedinOutline, YoutubeOutline, CameraFill, VideoCameraFill } from '@ant-design/icons-angular/icons';
+
+const icons: IconDefinition[] = [
+  InstagramOutline,
+  GithubOutline,
+  LinkedinOutline,
+  YoutubeOutline,
+  CameraFill,
+  VideoCameraFill
+];
 
 @NgModule({
   declarations: [
@@ -36,7 +48,8 @@ import { MenuOverlayService } from './shared/services/menu-overlay.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    OverlayModule
+    OverlayModule,
+    NzIconModule.forRoot(icons),
   ],
   providers: [
     MenuOverlayService
