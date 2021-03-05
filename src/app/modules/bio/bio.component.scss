@@ -110,7 +110,7 @@ h1 {
 }
 
 .section {
-  margin: 128px 0;
+  margin: 256px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -121,7 +121,7 @@ h1 {
   > div {
     margin: 12px 0;
 
-    &:first-of-type(div) {
+    &:first-of-type {
       font-weight: 500;
       margin-bottom: 18px;
     }
@@ -251,6 +251,10 @@ h1 {
   .experience {
     grid-template-columns: 1fr;
     grid-gap: 96px;
+  }
+
+  .section {
+    margin: 128px 0;
   }
 }
 

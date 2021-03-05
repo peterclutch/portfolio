@@ -19,6 +19,7 @@ import { MenuOverlayService } from './shared/services/menu-overlay.service';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
 import { InstagramOutline, GithubOutline, LinkedinOutline, YoutubeOutline, CameraFill, VideoCameraFill } from '@ant-design/icons-angular/icons';
+import { DrawAndBuildComponent } from './modules/project/project-content/draw-and-build/draw-and-build.component';
 
 const icons: IconDefinition[] = [
   InstagramOutline,
@@ -43,6 +44,7 @@ const icons: IconDefinition[] = [
     KatamariComponent,
     IceBreakerComponent,
     MenuMobileComponent,
+    DrawAndBuildComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { EasyScheduleComponent } from '../../modules/project/project-content/eas
 import { SquattyBuddyComponent } from '../../modules/project/project-content/squatty-buddy/squatty-buddy.component';
 import { KatamariComponent } from '../../modules/project/project-content/katamari/katamari.component';
 import { IceBreakerComponent } from '../../modules/project/project-content/ice-breaker/ice-breaker.component';
+import { DrawAndBuildComponent } from '../../modules/project/project-content/draw-and-build/draw-and-build.component';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,18 @@ export class ProjectService {
         title: 'Master\'s Thesis',
         ref: 'assets/documents/masters_thesis.pdf'
       }]
+    },
+    {
+      id: 'draw-and-build',
+      title: 'Using Projection Mapping to Combine LEGO Construction and Drawing',
+      subtitle: 'Projection Mapping',
+      date: new Date(2017, 5),
+      content: DrawAndBuildComponent,
+      team: [{
+        name: 'Anders Syrach Lykkegaard',
+        linkedIn: 'https://www.linkedin.com/in/anders-lykkegaard-916356148/'
+      }],
+      assets: []
     },
     {
       id: 'easy-schedule',

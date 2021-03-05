@@ -1,5 +1,7 @@
 @import "ph-colors";
 
+@import "ph-blobs";
+
 h1 {
   font-size: 28px;
   font-weight: 500;
@@ -15,24 +17,10 @@ h1 {
   }
 }
 
-.info-blob {
-  padding: 24px 32px;
-  margin: 48px 0;
-  background-color: $color-tertiary-muted;
-  color: $color-tertiary;
-  line-height: 2;
-  border-radius: 0 8px 8px 0;
-  max-width: 650px;
-  font-size: 17px;
-  font-weight: 500;
-  position: relative;
-  border-left: 4px $color-primary solid;
-}
-
 .container {
   width: 100%;
   max-width: 900px;
-  padding: 64px 32px 128px;
+  padding: 64px 32px 256px;
   margin: 0 auto;
   box-sizing: border-box;
 
@@ -72,15 +60,6 @@ h1 {
           margin-right: 15%;
           font-size: 22px;
           letter-spacing: -0.4px;
-
-          //&::after {
-          //  margin: 18px 0;
-          //  display: block;
-          //  content: '';
-          //  height: 4px;
-          //  width: 160px;
-          //  background: $color-primary;
-          //}
         }
 
         &:nth-child(3) {
@@ -96,10 +75,38 @@ h1 {
         div:nth-child(3):after {
           margin-left: 6px;
           content: ' > >';
-          //color: $color;
         }
       }
     }
+  }
+}
+
+.who-is-spy {
+  display: flex;
+  align-items: center;
+  margin-top: 96px;
+  padding: 24px 48px 24px 32px;
+  background-color: $color-success-background;
+  color: $color-tertiary;
+  border-radius: 25px;
+  width: fit-content;
+
+  > div:first-child {
+    font-size: 36px;
+    margin-right: 18px;
+  }
+
+  > div:last-child {
+
+    > div:first-child {
+      margin-bottom: 6px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  &:hover {
+    background-color: hsla(160deg, 100%, 40%, 0.15);
   }
 }
 
@@ -113,11 +120,7 @@ h1 {
   }
 
   .container {
-    padding: 64px 0 0;
-
-    .info-blob {
-      border-radius: 0;
-    }
+    padding: 64px 0 128px;
 
     h1, .description {
       padding-left: 16px;
@@ -141,5 +144,13 @@ h1 {
         align-self: normal;
       }
     }
+  }
+
+  .who-is-spy {
+    margin-top: 48px;
+    border-radius: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-left: 4px solid $color-success;
   }
 }

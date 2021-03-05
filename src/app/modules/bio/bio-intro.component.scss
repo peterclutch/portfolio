@@ -60,8 +60,8 @@
       animation-duration: 3s;
       -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite;
-      -webkit-animation-timing-function: ease;
-      animation-timing-function: ease;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
       -webkit-animation-direction: alternate;
       animation-direction: alternate;
 
@@ -92,8 +92,8 @@
       animation-duration: 3s;
       -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite;
-      -webkit-animation-timing-function: ease;
-      animation-timing-function: ease;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
       -webkit-animation-direction: alternate;
       animation-direction: alternate;
     }

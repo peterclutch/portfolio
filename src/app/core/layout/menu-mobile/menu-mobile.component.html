@@ -9,6 +9,11 @@
     </svg>
   </div>
   <ul>
-    <li *ngFor="let link of links" (click)="goToLink(link.directTo)">{{ link.name }}</li>
+    <li *ngFor="let link of links" (click)="goToLink(link.directTo)">
+      {{ link.name }}
+    </li>
+    <li class="secondary">
+      <a target="_blank" href="https://spy.peterhallum.dk"><em>🕵️</em> Try my fun little spy game!</a>
+    </li>
   </ul>
 </div>
