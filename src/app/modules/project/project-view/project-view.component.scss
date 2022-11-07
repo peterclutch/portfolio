@@ -75,10 +75,6 @@ h1 {
 
     h1 {
       color: $color-secondary;
-
-      &::after {
-        content: ' ➜';
-      }
     }
 
     a {
@@ -117,13 +113,6 @@ h1 {
 
     .extra {
       grid-template-columns: 1fr;
-
-      h1 {
-
-        &::after {
-          content: '';
-        }
-      }
     }
   }
 }
